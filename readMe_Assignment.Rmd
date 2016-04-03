@@ -1,0 +1,13 @@
+---
+title: "ReadMe"
+author: "Paul van der Kooy"
+date: "2 April 2016"
+output: html_document
+---
+
+My submission contains one extra function (getData.R). It retreives the data from the UC Irvine Machine Learning Repository and filters it to the relevant data needed for the assignment 
+(using data from the dates 2007-02-01 and 2007-02-02)
+
+All 4 plot functions assume this function has been executed and that the reduced dataset (powerData.txt) is available in the working directory
+
+This approach is more maintainable and reduces processing time to regenerate the plots
