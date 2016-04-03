@@ -20,7 +20,13 @@ plot3 <- function() {
      ##
      ##   Read the power comsumption data
      ##
-     powerData <- read.table("powerdata.txt", header = TRUE, sep=",")
+     ##   convert Datetime to POSIX Data/Time format
+     if (!exists("powerdata.txt")) {
+          source('getData.R')
+          getData()
+     } else {
+          powerData <- read.table("powerdata.txt", header = TRUE, sep=",")
+     }
      ##   convert Datetime to POSIX Data/Time format
      powerData$Datetime <- strptime(powerData$Datetime, '%Y-%m-%d %H:%M:%S')
      ##
